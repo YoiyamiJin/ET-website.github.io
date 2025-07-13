@@ -1,0 +1,105 @@
+/* contact_style.css */
+
+/* フォームセクションの一般的な調整 */
+.contact-form-section {
+    padding: 30px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    max-width: 700px;
+    margin: 30px auto; /* 中央寄せ */
+}
+
+.contact-form-section h2 {
+    color: #34495e;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8em;
+}
+
+.contact-form-section p {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* 必須マークのスタイル */
+.input-group .required {
+    color: #e74c3c; /* 赤色 */
+    margin-left: 5px;
+    font-size: 0.9em;
+}
+
+/* 入力グループのスタイル */
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #444;
+    font-size: 1em;
+}
+
+.input-group input[type="text"],
+.input-group input[type="email"],
+.input-group textarea {
+    width: calc(100% - 24px); /* パディングとボーダーを考慮 */
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box; /* パディングを含めて幅を計算 */
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group input[type="email"]:focus,
+.input-group textarea:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.3);
+}
+
+.input-group textarea {
+    resize: vertical; /* 垂直方向のみリサイズ可能 */
+    min-height: 120px;
+}
+
+/* ボタンのグループ */
+.button-group {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* 送信後のメッセージ */
+.message {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.message.success {
+    background-color: #d4edda;
+    color: #28a745;
+    border: 1px solid #c3e6cb;
+}
+
+.message.error {
+    background-color: #f8d7da;
+    color: #dc3545;
+    border: 1px solid #f5c6cb;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .contact-form-section {
+        margin: 20px 15px; /* スマホでは左右のマージンを少し小さく */
+        padding: 20px;
+    }
+}

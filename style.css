@@ -1,0 +1,335 @@
+/* style.css */
+
+/* 基本設定 */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* ヒーローセクション */
+.hero-section {
+    background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.hero-section h1 {
+    font-size: 2.8em;
+    margin-bottom: 10px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-section .subtitle {
+    font-size: 1.4em;
+    opacity: 0.9;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* メインナビゲーション */
+.main-nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.main-nav a {
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+}
+
+.main-nav a:active {
+    transform: translateY(0);
+}
+
+.main-nav a.active {
+    background-color: white;
+    color: #3498db;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+/* メインコンテンツ */
+.main-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+section {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    padding: 30px;
+    margin-bottom: 40px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+section h2::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #3498db;
+    border-radius: 2px;
+}
+
+/* 私たちの強みセクション */
+.strength-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.strength-item {
+    background-color: #f4f7f9;
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.strength-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.strength-item h3 {
+    color: #3498db;
+    font-size: 1.3em;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.strength-item p {
+    font-size: 0.95em;
+    color: #555;
+}
+
+/* 汎用的なボタンの基本スタイル */
+.btn {
+    display: inline-block;
+    padding: 15px 35px; /* 大きさとパディング */
+    border: none;
+    border-radius: 30px; /* 強く角丸 */
+    cursor: pointer;
+    font-size: 1.2em; /* フォントサイズ */
+    font-weight: bold;
+    text-decoration: none; /* リンクのアンダーラインを消す */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center; /* テキスト中央寄せ */
+    white-space: nowrap; /* テキストの折り返しを防ぐ */
+}
+
+/* プライマリボタン (緑色系の強調ボタン) */
+.btn-primary {
+    background-color: #28a745; /* 緑色 */
+    color: white;
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+}
+
+.btn-primary:hover {
+    background-color: #218838; /* ホバーで少し濃い緑 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(40, 167, 69, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.2);
+}
+
+/* 成功ボタン (青色系の更新ボタンなど) */
+.btn-success {
+    background-color: #007bff; /* 青色 */
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+.btn-success:hover {
+    background-color: #0056b3; /* ホバーで少し濃い青 */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+.btn-success:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(0, 123, 255, 0.2);
+}
+
+/* セカンダリボタン (グレー系のキャンセルボタンなど) */
+.btn-secondary {
+    background-color: #6c757d; /* グレー */
+    color: white;
+    box-shadow: 0 4px 10px rgba(108, 117, 125, 0.3);
+}
+
+.btn-secondary:hover {
+    background-color: #5a6268; /* ホバーで少し濃いグレー */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(108, 117, 125, 0.4);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 5px rgba(108, 117, 125, 0.2);
+}
+
+/* 入室ボタンコンテナ (index.htmlのボタン配置用) */
+.join-button-container {
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* 最新速報情報セクション */
+.info-list {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.info-item {
+    background-color: #fefefe;
+    border-left: 5px solid; /* 情報種別で色が変わるボーダー */
+    border-radius: 8px;
+    padding: 15px 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+/* 情報種別ごとのボーダー色 */
+.info-item.earthquake { border-color: #e74c3c; /* 赤 */ }
+.info-item.weather { border-color: #f39c12; /* オレンジ */ }
+.info-item.traffic { border-color: #27ae60; /* 緑 */ }
+.info-item.system { border-color: #7f8c8d; /* グレー */ }
+
+.info-item h3 {
+    margin: 0 0 5px 0;
+    font-size: 1.1em;
+    color: #34495e;
+}
+
+.info-item .info-tag { /* Type表示用のタグスタイル */
+    display: inline-block;
+    background-color: #7f8c8d; /* デフォルトのタグ背景 */
+    color: white;
+    padding: 4px 8px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    margin-right: 10px;
+    margin-bottom: 5px;
+}
+/* 情報タグの色を情報タイプに合わせて調整 */
+.info-item.earthquake .info-tag { background-color: #e74c3c; }
+.info-item.weather .info-tag { background-color: #f39c12; }
+.info-item.traffic .info-tag { background-color: #27ae60; }
+.info-item.system .info-tag { background-color: #7f8c8d; }
+
+
+.info-item .info-date {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 8px;
+}
+
+.info-item p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.loading-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 30px;
+}
+
+/* フッター */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 0.9em;
+    margin-top: 50px;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .hero-section h1 {
+        font-size: 2em;
+    }
+
+    .hero-section .subtitle {
+        font-size: 1.1em;
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .strength-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .strength-item {
+        padding: 20px;
+    }
+
+    .btn {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
+
+    .main-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav a {
+        width: 80%;
+        max-width: 250px;
+    }
+}

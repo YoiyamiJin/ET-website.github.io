@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>情報共有オープンチャット - 津波情報</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="tsunami_style.css"> </head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>津波情報</h1>
+            <p class="subtitle">最新の津波に関するお知らせを掲載しています</p>
+            <nav class="main-nav">
+                <a href="index.html">トップページ</a>
+                <a href="earthquake.html">地震速報</a>
+                <a href="tsunami.html" class="active">津波情報</a>
+                <a href="contact.html">お問い合わせ</a>
+                <a href="admin.html">管理ページ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="info-display-section">
+            <h2>最新の津波情報</h2>
+            <div id="tsunami-list-container" class="info-list">
+                <p class="loading-message">津波情報を読み込み中...</p>
+                </div>
+            <p class="disclaimer">※この情報はp2p地震情報APIからの速報であり、状況が変化する可能性があります。自治体からの公式発表や避難指示に必ず従ってください。</p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 地震速報/気象情報/交通情報 共有オープンチャット. All rights reserved.</p>
+    </footer>
+
+    <script src="tsunami_script.js"></script>
+</body>
+</html>

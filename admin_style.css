@@ -1,0 +1,165 @@
+/* admin_style.css */
+/* 管理ページ固有のスタイル */
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.input-group input[type="text"],
+.input-group input[type="password"],
+.input-group select,
+.input-group textarea {
+    width: calc(100% - 20px);
+    padding: 12px 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1em;
+    box-sizing: border-box;
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.button-group {
+    text-align: right;
+    margin-top: 20px;
+}
+
+.button-group .btn {
+    margin-left: 10px;
+}
+
+.button-group #update-button,
+.button-group #cancel-edit-button {
+    display: none;
+}
+
+.info-list {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 15px;
+    background-color: #fdfdfd;
+    min-height: 200px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.info-item-content {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.info-item-content h3 {
+    margin: 0 0 5px 0;
+    color: #34495e;
+    font-size: 1.1em;
+}
+
+.info-item-content p {
+    margin: 0;
+    font-size: 0.95em;
+    color: #444;
+}
+
+.info-item-meta {
+    font-size: 0.8em;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.info-item-meta span.item-type {
+    font-weight: bold;
+    color: #3498db;
+    margin-right: 5px;
+}
+
+.info-item-actions button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9em;
+    margin-left: 10px;
+    color: #007bff;
+    transition: color 0.2s ease;
+}
+
+.info-item-actions button.delete-btn {
+    color: #dc3545;
+}
+
+.info-item-actions button:hover {
+    text-decoration: underline;
+}
+
+.loading-message {
+    text-align: center;
+    color: #888;
+    font-style: italic;
+    padding: 50px;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* 警告カラーのボタン */
+.btn-warning {
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+.btn-warning:hover {
+    background-color: #d87e04;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .main-content {
+        padding: 0 10px;
+    }
+    section {
+        padding: 20px;
+    }
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .info-item-content {
+        margin-right: 0;
+        margin-bottom: 10px;
+        width: 100%;
+    }
+    .info-item-actions {
+        width: 100%;
+        text-align: right;
+    }
+    .info-item-actions button {
+        margin-left: 0;
+        margin-right: 10px;
+    }
+}

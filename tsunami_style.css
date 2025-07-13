@@ -1,0 +1,64 @@
+/* tsunami_style.css */
+
+/*
+    共通のスタイルは style.css で定義されているため、
+    ここでは津波情報ページ固有のスタイルのみを記述します。
+*/
+
+/* 情報リストのセクションに共通で適用される .info-display-section は style.css で定義されているはずです。 */
+/* 必要に応じてこのファイルで上書き・追加してください */
+
+/* 津波情報アイテム固有のスタイル */
+.info-item.tsunami {
+    /* 必要に応じて、共通の.info-itemを上書きするスタイル */
+}
+
+.info-item.tsunami .info-item-content h3 {
+    color: #2c3e50;
+    font-size: 1.2em;
+}
+
+.info-item.tsunami .info-item-meta .item-type {
+    font-weight: bold;
+    /* デフォルトの津波タイプの色 */
+    color: #2980b9;
+}
+
+/* 津波の種類に応じたクラススタイル */
+.info-item.tsunami-warning {
+    border-left: 8px solid #e74c3c; /* 赤色で危険を強調 */
+}
+.info-item.tsunami-warning .info-item-meta .item-type {
+    color: #e74c3c; /* テキストも赤色 */
+}
+
+.info-item.tsunami-advisory {
+    border-left: 8px solid #f39c12; /* オレンジ色で注意を促す */
+}
+.info-item.tsunami-advisory .info-item-meta .item-type {
+    color: #f39c12; /* テキストもオレンジ色 */
+}
+
+.info-item.tsunami-forecast {
+    border-left: 8px solid #3498db; /* 青色で予報を表す */
+}
+.info-item.tsunami-forecast .info-item-meta .item-type {
+    color: #3498db; /* テキストも青色 */
+}
+
+/* 免責事項のスタイル */
+.disclaimer {
+    text-align: center;
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}
+
+/* レスポンシブ対応 (必要に応じて調整) */
+@media (max-width: 768px) {
+    /* .info-item の共通レスポンシブスタイルは style.css または admin_style.css から引き継がれます */
+    /* 津波情報固有の調整があればここに追加 */
+}

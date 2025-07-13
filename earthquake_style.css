@@ -1,0 +1,33 @@
+/* earthquake_style.css */
+
+/* .info-item の地震速報に特化したスタイルがあれば追加 */
+/* 例えば、地震速報の枠線をより強調するなど */
+.info-item.earthquake {
+    border-left: 8px solid #cc0000; /* より濃い赤 */
+}
+
+/* 特定の要素に対して地震情報ページ独自のスタイルを適用 */
+.section-earthquake-info h2 {
+    color: #cc0000; /* 地震情報セクションのタイトル色 */
+}
+
+.section-earthquake-info h2::after {
+    background-color: #cc0000; /* 下線も赤 */
+}
+
+/* ローディングメッセージの調整 */
+.loading-message {
+    font-size: 1.1em;
+    padding: 50px 20px;
+}
+
+/* 免責事項のスタイル */
+.disclaimer {
+    text-align: center;
+    font-size: 0.85em;
+    color: #7f8c8d;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #ecf0f1;
+    border-radius: 5px;
+}

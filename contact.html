@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 情報共有オープンチャット</title>
+    <link rel="stylesheet" href="style.css"> <link rel="stylesheet" href="contact_style.css"> </head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>お問い合わせ</h1>
+            <p class="subtitle">ご質問、ご意見、ご要望などはこちらから</p>
+            <nav class="main-nav">
+                <a href="index.html">トップページ</a>
+                <a href="earthquake.html">地震速報</a>
+                <a href="tsunami.html">津波情報</a>
+                <a href="contact.html" class="active">お問い合わせ</a>
+                <a href="admin.html">管理ページ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="contact-form-section">
+            <h2>お問い合わせフォーム</h2>
+            <p>以下のフォームにご入力の上、送信してください。<br>通常、1週間以内にご返信いたします。</p>
+            <form id="contactForm">
+                <div class="input-group">
+                    <label for="name">お名前 (オープンチャット内) <span class="required">*</span></label>
+                    <input type="text" id="name" name="entry.619127786" required placeholder="例: チャット太郎">
+                </div>
+                <div class="input-group">
+                    <label for="email">メールアドレス <span class="required">*</span></label>
+                    <input type="email" id="email" name="entry.158265006" required placeholder="例: your.email@example.com">
+                </div>
+                <div class="input-group">
+                    <label for="subject">お問い合わせ件名 <span class="required">*</span></label>
+                    <input type="text" id="subject" name="entry.1583345054" required placeholder="例: 不具合報告、機能要望">
+                </div>
+                <div class="input-group">
+                    <label for="message">お問い合わせ内容 <span class="required">*</span></label>
+                    <textarea id="message" name="entry.959658363" rows="8" required placeholder="お問い合わせ内容を具体的にご記入ください。"></textarea>
+                </div>
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">送信</button>
+                </div>
+                <p id="formMessage" class="message"></p>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 地震速報/気象情報/交通情報 共有オープンチャット. All rights reserved.</p>
+    </footer>
+
+    <script src="contact_script.js"></script>
+</body>
+</html>

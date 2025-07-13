@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>管理ページ - 情報共有オープンチャット</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <div class="hero-content">
+            <h1>情報管理ダッシュボード</h1>
+            <p class="subtitle">サイトの情報を追加・編集・削除します</p>
+            <nav class="main-nav">
+                <a href="index.html">トップページ</a>
+                <a href="earthquake.html">地震速報</a>
+                <a href="tsunami.html">津波情報</a>
+                <a href="contact.html">お問い合わせ</a>
+                <a href="admin.html" class="active">管理ページ</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section id="login-section" class="form-section">
+            <h2>管理者ログイン</h2>
+            <div class="input-group">
+                <label for="username">ユーザー名:</label>
+                <input type="text" id="username" placeholder="ユーザー名を入力してください">
+            </div>
+            <div class="input-group">
+                <label for="password">パスワード:</label>
+                <input type="password" id="password" placeholder="パスワードを入力してください">
+            </div>
+            <div class="button-group">
+                <button id="login-button" class="btn btn-primary">ログイン</button>
+            </div>
+            <p id="login-message" class="error-message"></p>
+        </section>
+
+        <div id="admin-content" style="display: none;">
+            <section class="form-section">
+                <h2>情報 追加 / 編集</h2>
+                <input type="hidden" id="info-id">
+                <div class="input-group">
+                    <label for="info-type">種類:</label>
+                    <select id="info-type">
+                        <option value="earthquake">地震速報</option>
+                        <option value="weather">気象情報</option>
+                        <option value="traffic">交通情報</option>
+                        <option value="system">システム通知</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="info-title">タイトル:</label>
+                    <input type="text" id="info-title" placeholder="情報のタイトルを入力してください...">
+                </div>
+                <div class="input-group">
+                    <label for="info-content">内容:</label>
+                    <textarea id="info-content" placeholder="情報の具体的な内容を入力してください..." rows="5"></textarea>
+                </div>
+                <div class="button-group">
+                    <button id="add-button" class="btn btn-primary">追加</button>
+                    <button id="update-button" class="btn btn-success">更新</button>
+                    <button id="cancel-edit-button" class="btn btn-secondary">キャンセル</button>
+                </div>
+            </section>
+
+            <section class="info-list-section">
+                <h2>既存の情報</h2>
+                <div id="info-list-container" class="info-list">
+                    <p class="loading-message">情報を読み込み中...</p>
+                </div>
+            </section>
+
+            <section id="password-change-section" class="form-section">
+                <h2>パスワード変更</h2>
+                <div class="input-group">
+                    <label for="change-username">ユーザー名:</label>
+                    <input type="text" id="change-username" placeholder="ユーザー名を入力してください">
+                </div>
+                <div class="input-group">
+                    <label for="current-password">現在のパスワード:</label>
+                    <input type="password" id="current-password" placeholder="現在のパスワードを入力してください">
+                </div>
+                <div class="input-group">
+                    <label for="new-password">新しいパスワード:</label>
+                    <input type="password" id="new-password" placeholder="新しいパスワードを入力してください">
+                </div>
+                <div class="input-group">
+                    <label for="confirm-password">新しいパスワード（確認）:</label>
+                    <input type="password" id="confirm-password" placeholder="確認のためもう一度入力してください">
+                </div>
+                <div class="button-group">
+                    <button id="change-password-button" class="btn btn-warning">パスワードを変更</button>
+                </div>
+                <p id="change-password-message" class="error-message"></p>
+            </section>
+
+            <div class="button-group" style="text-align: center; margin-top: 30px;">
+                <button id="logout-button" class="btn btn-secondary">ログアウト</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 地震速報/気象情報/交通情報 共有オープンチャット. All rights reserved.</p>
+    </footer>
+
+    <script src="admin_script.js"></script>
+</body>
+</html>
